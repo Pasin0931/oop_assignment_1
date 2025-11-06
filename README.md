@@ -8,15 +8,17 @@
 
 ## Project Structure
 
-|--- oop_solution # File contained refactored code
-| |--- library_oop.py # Answer
-| |--- test.py # Testing file for refactored OOP code
-|
-|--- procedural_version # The analysis code
-| |--- library_procedural.py # Original code
-| |--- test.py # Testing file for original code (empty)
-|
-|--- README.md # Current file
+- **oop_solution**  
+  Contains the refactored object-oriented code:  
+  - `library_oop.py` — Answer implementation  
+  - `test.py` — Testing file for refactored OOP code  
+
+- **procedural_version**  
+  Contains the original procedural-style code:  
+  - `library_procedural.py` — Original code  
+  - `test.py` — Testing file for original code (empty)  
+
+- `README.md` — This documentation file
 
 ---
 

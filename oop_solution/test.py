@@ -92,8 +92,8 @@ class Library:
 
     def return_book(self, member_id, book_id):
         """Process a book return transaction"""
-        member = find_member(member_id)
-        book = find_book(book_id)
+        member = self.find_member(member_id)
+        book = self.find_book(book_id)
         
         if not member or not book:
             print("Error: Member or book not found!")
@@ -217,12 +217,12 @@ def test_library_system():
     lib_.display_member_books(101)
     lib_.borrow_book(101, 3)  # Alice tries to borrow 4th book (should fail)
     
-    # # Test 10: Return Books
-    # print("\n--- TEST 10: Returning Books ---")
-    # return_book(101, 1)  # Alice returns Python Crash Course
-    # return_book(102, 1)  # Bob returns Python Crash Course
-    # display_member_books(101)
-    # display_available_books()
+    # Test 10: Return Books
+    print("\n--- TEST 10: Returning Books ---")
+    lib_.return_book(101, 1)  # Alice returns Python Crash Course
+    lib_.return_book(102, 1)  # Bob returns Python Crash Course
+    lib_.display_member_books(101)
+    lib_.display_available_books()
     
     # # Test 11: Try to Return Book Not Borrowed
     # print("\n--- TEST 11: Attempting Invalid Return ---")
